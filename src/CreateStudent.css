@@ -1,0 +1,62 @@
+/* src/CreateStudent.css */
+.admin-subpage {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  background-color: #f1f5f9;
+  min-height: 100vh;
+}
+
+.form-card {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.form-card h2 { color: #0f172a; margin-bottom: 5px; }
+.form-instruction { color: #64748b; margin-bottom: 30px; font-size: 0.9rem; }
+
+.admin-form .form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #334155;
+  font-size: 0.9rem;
+}
+
+.input-group input, .input-group select {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.create-btn {
+  background-color: #f59e0b; /* Admin Orange */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.create-btn:hover { background-color: #d97706; }

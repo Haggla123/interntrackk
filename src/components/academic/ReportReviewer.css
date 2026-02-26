@@ -1,0 +1,62 @@
+.review-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.file-display-box {
+  background: var(--slate-100);
+  border: 1px dashed var(--primary-azure);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.file-info-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.file-info-icon span {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+}
+
+.download-btn {
+  background-color: var(--primary-azure);
+  width: auto;
+  display: inline-flex;
+  padding: 10px 20px;
+}
+
+.summary-pills {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.summary-pill {
+  background: var(--white);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--emerald-600);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid var(--slate-200);
+}
+
+/* Responsive Fix */
+@media screen and (max-width: 480px) {
+  .review-grid {
+    grid-template-columns: 1fr;
+  }
+}

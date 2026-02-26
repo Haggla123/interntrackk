@@ -1,0 +1,94 @@
+/* src/LogbookHistory.css */
+.history-page {
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+.history-header { margin-bottom: 40px; }
+.history-header h1 { color: #1e293b; margin: 10px 0 5px; }
+.history-header p { color: #64748b; }
+
+.accordion-container { display: flex; flex-direction: column; gap: 15px; }
+
+.week-section {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.week-section.open { border-color: #2563eb; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1); }
+
+.week-header {
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: white;
+}
+
+.week-header:hover { background: #f8fafc; }
+
+.week-badge {
+  background: #2563eb;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-weight: 700;
+  margin-right: 15px;
+}
+
+.week-dates { color: #64748b; font-weight: 500; }
+
+.week-controls { display: flex; align-items: center; gap: 20px; color: #94a3b8; }
+.entry-count { font-size: 0.85rem; font-weight: 600; color: #475569; }
+
+/* Expanded Content */
+.week-content {
+  border-top: 1px solid #f1f5f9;
+  background: #fcfcfd;
+  padding: 10px 25px;
+}
+
+.day-row {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.day-row:last-child { border-bottom: none; }
+
+.day-meta { width: 120px; display: flex; flex-direction: column; }
+.day-name { font-weight: 700; color: #1e293b; }
+.day-date { font-size: 0.75rem; color: #94a3b8; }
+
+.day-task { flex: 1; display: flex; align-items: center; gap: 10px; color: #475569; font-size: 0.95rem; }
+
+.day-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.day-status.approved { color: #059669; background: #ecfdf5; }
+.day-status.pending { color: #d97706; background: #fffbeb; }
+.day-status.rejected { color: #dc2626; background: #fef2f2; }
+
+/* Animation */
+.animated-slide-down {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

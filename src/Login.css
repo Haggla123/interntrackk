@@ -1,0 +1,124 @@
+.login-page-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #03256c;
+}
+
+/*  ANIMATED MESH GRADIENT */
+.bg-gradient-mesh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(at 0% 0%, #1768ac 0px, transparent 50%),
+    radial-gradient(at 100% 0%, #06bee1 0px, transparent 50%),
+    radial-gradient(at 100% 100%, #1e1b4b 0px, transparent 50%),
+    radial-gradient(at 0% 100%, #03256c 0px, transparent 50%);
+  filter: blur(80px);
+  z-index: 1;
+}
+
+.login-content-box {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 460px;
+  padding: 20px;
+}
+
+/* ✨ GLASSMORPHISM CARD */
+.login-card-glass {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.login-brand { text-align: center; margin-bottom: 30px; }
+.brand-icon-circle {
+  width: 64px; height: 64px;
+  background: #f1f5f9;
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 15px;
+}
+.login-brand h1 { font-size: 2rem; color: #1e1b4b; font-weight: 900; }
+.login-brand p { color: #64748b; font-size: 0.85rem; }
+
+/* 🔘 ROLE SELECTOR TABS */
+.role-selector-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  background: #f1f5f9;
+  padding: 6px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.role-selector-tabs button {
+  padding: 10px; border: none; background: none; border-radius: 8px;
+  font-size: 0.8rem; font-weight: 700; color: #64748b;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  cursor: pointer; transition: 0.2s;
+}
+
+.role-selector-tabs button.active {
+  background: white; color: #03256c;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* 📝 FORM STYLES */
+.form-group-custom { margin-bottom: 20px; }
+.form-group-custom label { display: block; font-size: 0.75rem; font-weight: 800; color: #1e1b4b; text-transform: uppercase; margin-bottom: 8px; }
+
+.input-wrapper-glass { position: relative; display: flex; align-items: center; }
+.input-icon { position: absolute; left: 15px; color: #94a3b8; }
+
+.input-wrapper-glass input {
+  width: 100%;
+  padding: 14px 15px 14px 45px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.input-wrapper-glass input:focus {
+  outline: none; border-color: #03256c; background: white;
+  box-shadow: 0 0 0 4px rgba(3, 37, 108, 0.1);
+}
+
+.password-toggle-btn { position: absolute; right: 15px; background: none; border: none; cursor: pointer; color: #94a3b8; }
+
+.btn-login-submit {
+  width: 100%;
+  padding: 16px;
+  background: #03256c;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  cursor: pointer; transition: 0.3s; margin-top: 10px;
+}
+
+.btn-login-submit:hover { background: #1768ac; transform: translateY(-2px); }
+.link-text{padding-left: 80px;}
+
+/* --- MOBILE RESPONSIVE --- */
+@media screen and (max-width: 480px) {
+  .login-card-glass { padding: 30px 20px; border-radius: 0; width: 100vw; height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+  .login-content-box { padding: 0; max-width: 100%; }
+  .role-selector-tabs { grid-template-columns: repeat(2, 1fr); }
+  .link-text{padding-left: 80px;}
+}

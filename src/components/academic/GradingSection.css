@@ -1,0 +1,428 @@
+/* src/GradingSection.css */
+.grading-container {
+  padding: 40px;
+  background-color: #f5f3ff; /* Very light purple background */
+  min-height: 100vh;
+}
+
+.grading-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.back-btn {
+  background: none;
+  border: 1px solid #7c3aed;
+  color: #7c3aed;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.grading-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(109, 40, 217, 0.1);
+  overflow: hidden;
+  border: 1px solid #ddd6fe;
+}
+
+.grading-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.grading-table th {
+  background-color: #fdf2f8;
+  color: #5b21b6;
+  text-align: left;
+  padding: 18px;
+  font-size: 0.9rem;
+}
+
+.grading-table td {
+  padding: 18px;
+  border-bottom: 1px solid #ede9fe;
+  color: #1e293b;
+}
+
+.grade-cell {
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: #7c3aed;
+}
+
+/* Status Pills */
+.status-pill {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-pill.graded { background: #dcfce7; color: #166534; }
+.status-pill.pending-review { background: #fef3c7; color: #92400e; }
+.status-pill.underperforming { background: #fee2e2; color: #991b1b; }
+
+.open-report-btn {
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.open-report-btn:hover { background-color: #6d28d9; }
+
+.grading-page {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* Update these in GradingSection.css */
+.academic-banner {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%) !important;
+  color: white !important;
+  margin-bottom: 25px;
+}
+
+.score-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f5f3ff;
+  color: #7c3aed;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 800;
+  border: 1px solid #ddd6fe;
+}
+
+.grade-cell {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  color: #7c3aed;
+  font-size: 1.4rem;
+}
+
+.name-cell strong { display: block; color: var(--slate-900); }
+.name-cell span { font-size: 11px; color: var(--slate-500); font-weight: 600; }
+
+
+.main-content-area {
+  flex: 1;
+  padding: 30px;
+  transition: margin-right 0.3s ease;
+}
+
+.main-content-area.shrunk {
+  margin-right: 400px; /* Space for the drawer */
+}
+
+.clickable-row {
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.clickable-row:hover {
+  background: #f1f5f9;
+}
+
+/* Side Drawer Styles */
+.student-drawer {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 400px;
+  height: 100vh;
+  background: white;
+  box-shadow: -5px 0 15px rgba(0,0,0,0.05);
+  border-left: 1px solid #e2e8f0;
+  padding: 40px 30px;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.close-drawer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #94a3b8;
+}
+
+.drawer-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.drawer-avatar {
+  width: 70px;
+  height: 70px;
+  background: #7c3aed;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0 auto 15px;
+}
+
+.drawer-section {
+  margin-bottom: 25px;
+}
+
+.drawer-section h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: #64748b;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.contact-card, .work-card {
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.contact-card p, .work-card p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  margin: 8px 0;
+  color: #1e293b;
+}
+
+.animated-slide-in-right {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.view-logbook-btn {
+  background-color: #7c3aed; /* Purple theme */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.view-logbook-btn:hover {
+  background-color: #6d28d9;
+}
+
+.grading-header p {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+/* Evidence Button (Logbook & Report) */
+.evidence-btn {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.evidence-btn:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+/* Finalize Button */
+.finalize-btn {
+  background: #1e1b4b; /* Deep University Navy */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Modal Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.grade-modal {
+  background: white;
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.grade-selector-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.grade-option {
+  padding: 15px;
+  border: 2px solid #f1f5f9;
+  background: white;
+  border-radius: 12px;
+  font-weight: 800;
+  color: #1e1b4b;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.grade-option:hover {
+  border-color: #7c3aed;
+  background: #f5f3ff;
+}
+
+.btn-save-grade {
+  width: 100%;
+  padding: 14px;
+  background: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.animated-slide-up {
+  animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Highlighting the selected grade tile */
+.grade-option.selected {
+  border-color: #7c3aed;
+  background: #7c3aed;
+  color: white;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.modal-sub-data {
+  margin-top: 10px;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.grading-search-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-wrapper-bento.univ {
+  background: white;
+  border: 1px solid var(--slate-200);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  width: 350px;
+  transition: 0.2s;
+}
+
+.search-wrapper-bento.univ:focus-within {
+  border-color: #1e1b4b; /* Deep Navy */
+  box-shadow: 0 0 0 3px rgba(30, 27, 75, 0.1);
+}
+
+.results-count {
+  font-size: 13px;
+  color: var(--slate-500);
+  font-weight: 600;
+}
+
+.no-results-cell {
+  padding: 40px !important;
+  text-align: center;
+  color: var(--slate-400);
+  font-style: italic;
+}
+
+/* Selection State */
+.grade-option.selected {
+  background: #7c3aed;
+  color: white;
+  border-color: #7c3aed;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.grade-modal {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  width: 400px;
+}
+
+.grade-selector-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.grade-option {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}

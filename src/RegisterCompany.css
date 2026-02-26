@@ -1,0 +1,63 @@
+/* src/RegisterCompany.css */
+.admin-subpage {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  padding: 50px 20px;
+}
+
+.form-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.form-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.form-card h2 { color: #1e293b; margin-bottom: 8px; }
+.subtitle { color: #94a3b8; font-size: 0.9rem; margin-bottom: 30px; }
+
+.form-group { margin-bottom: 20px; display: flex; flex-direction: column; }
+.form-group label { font-weight: 600; margin-bottom: 8px; font-size: 0.85rem; color: #475569; }
+.form-group input, .form-group select { padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+.geo-verification-box {
+  background-color: #fff7ed;
+  border: 1px solid #ffedd5;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 25px 0;
+}
+
+.geo-verification-box h3 { font-size: 1rem; color: #9a3412; margin-bottom: 5px; }
+.geo-verification-box p { font-size: 0.8rem; color: #c2410c; margin-bottom: 15px; }
+
+.register-btn {
+  width: 100%;
+  background-color: #f59e0b; /* Admin Orange */
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.register-btn:hover { background-color: #d97706; }
